@@ -1,0 +1,98 @@
+@import '../ulti/breakpoints.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-san);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  background: var(--wiki-color-light-gray);
+  color: var(--wiki-color-light-gray);
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: rem(24);
+  margin-bottom: rem(3);
+  @include breakpoint-up(large) {
+    font-size: rem(28);
+  }
+}
+
+h2 {
+  font-size: rem(24);
+  margin-bottom: rem(24);
+  color: var(--text-color2);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+:root{
+  --layout-logo-origins-height: 11px;
+  --layout-logo-origins-top: 8px;
+  --layout-logo-athleticz-height: 21px;
+  --layout-logo-athleticz-top: 5px;
+  --layout-logo-athleticz-bottom: 0;
+  --layout-header-logo-height-origins: calc(50px - var(--spacing-03));
+  @include breakpoint-up (small){
+    --layout-logo-origins-height: 14px;
+    --layout-logo-origins-top: var(--spacing-02);
+    --layout-logo-athleticz-height: 64px;
+    --layout-logo-athleticz-top: 6px;
+    --layout-logo-athleticz-bottom: 41px;
+  }
+  @include breakpoint-up (xxlarge){
+    --layout-logo-origins-height: 16px;
+    --layout-logo-athleticz-height: 128px;
+    --layout-logo-athleticz-top: 6px;
+    --layout-logo-athleticz-bottom: 92px;
+  }
+}
+:root {
+  --layout-header-horizontal-padding: 20px;
+  --layout-header-mobile-action-width: 18px;
+  --layout-header-mobile-left-action-width: calc(var(--layout-header-mobile-action-width) + var(--spacing-04));
+}
+
+:root {
+  --button-diameter: 32px;
+  --color-diameter: 20px;
+  --color-marker-diameter: 30px;
+  --color-marker-padding: 4px;
+  --color-margin: var(--spacing-05);
+  @include breakpoint-up(small){
+    --button-diameter: 20px;
+    --color-diameter: 12px;
+    --color-marker-diameter: 18px;
+    --color-marker-padding: 2px;
+    --color-margin: var(--spacing-04);
+  }
+  @include breakpoint-up(xxlarge){
+    --button-diameter: 26px;
+    --color-diameter: 16px;
+    --color-marker-diameter: 24px;
+    --color-marker-padding: 3px;
+    --color-margin: var(--spacing-03);
+  }
+}
+
+.container {
+	
+}
